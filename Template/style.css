@@ -1,0 +1,161 @@
+:root {
+  --border-color: rgba(15, 15, 15, 0.3);
+  --background-dark: rgb(52, 52, 77);
+  --background-light: rgb(218, 140, 140);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  transition: 0.3s;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+body.show-nav {
+  /*width of nav*/
+  transform: translateX(20%);
+}
+body.show-nav .switch {
+  transform: translateX(-100px);
+}
+header {
+  width: 100%;
+  background-color: var(--background-light);
+  width: 100vw;
+  padding: 20px;
+  position: sticky;
+}
+.nav-top {
+  width: 100%;
+  position: fixed;
+  padding-left: 50px;
+}
+
+.nav-top ul {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  place-self: left;
+}
+
+.nav-side {
+  background-color: var(--background-light);
+  border-right: 2px solid var(--border-color);
+  color: rgb(6, 39, 32);
+  position: fixed;
+  top: 0px;
+  left: -20px;
+  width: 300px;
+  height: 100vw;
+  padding-top: 120px;
+  z-index: 100;
+  transition: 0.3s;
+  transform: translateX(-100%);
+}
+
+.nav-side ul,
+.nav-top ul li {
+  padding: 0;
+  list-style-type: none;
+  margin: 0;
+}
+.nav-side ul li {
+  border-bottom: 2px solid var(--border-color);
+  padding: 20px;
+}
+.nav-side ul li:first-of-type {
+  border-top: 2px solid var(--border-color);
+}
+.nav-side ul li a {
+  color: aliceblue;
+  text-decoration: none;
+}
+.nav-side ul li a:hover {
+  text-decoration: underline;
+}
+.toggle {
+  position: absolute;
+  top: 75px;
+  left: 10px;
+}
+
+header {
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  padding: 30px;
+}
+.switch {
+  position: absolute;
+  top: 90px;
+  right: 10px;
+  width: 60px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: rgb(68, 67, 67);
+  transform: translate(0);
+}
+.flicker {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: white;
+  transition: 0.3s;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  box-shadow: inset -4px -4px 4px rgb(0, 0, 0, 0.2);
+}
+.dark {
+  background-color: rgb(39, 38, 54);
+  transition: 0.3s;
+}
+.dark > * {
+  color: white;
+}
+.moon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  box-shadow: 4px 4px 0 0 white;
+  position: absolute;
+  top: 1px;
+  left: 31px;
+  z-index: 10;
+}
+.dark .flicker {
+  transform: translateX(30px);
+}
+
+.dark header {
+  background-color: var(--background-dark);
+  color: white;
+}
+.dark .nav-side {
+  background-color: var(--background-dark);
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: bisque;
+}
+.dark footer {
+  background-color: var(rgb(52, 52, 77));
+}
+a {
+  text-decoration: none;
+  color: rgb(165, 42, 73);
+  color: white;
+  font-size: large;
+}
+
+@media only screen and (min-width: 970px) {
+  .square {
+    width: 48%;
+    margin: 1%;
+    height: 500px;
+  }
+}
