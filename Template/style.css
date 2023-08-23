@@ -13,6 +13,7 @@ body {
   margin: 0;
   padding: 0;
   position: relative;
+  max-width: 1700px;
 }
 body.show-nav {
   /*width of nav*/
@@ -53,7 +54,7 @@ header {
   padding-left: 15px;
   z-index: 100;
   transition: 0.3s;
-  transform: translateX(-100%);
+  transform: translateX(-300px);
 }
 
 .nav-side ul,
@@ -154,10 +155,49 @@ a {
   font-size: large;
 }
 
-@media only screen and (min-width: 970px) {
-  .square {
-    width: 48%;
-    margin: 1%;
-    height: 500px;
+@media only screen and (max-width: 320px) {
+  *{
+    font-size: 10px;
+  }
+  .nav-side {
+    width: 150px;
+    transform: translateX(-150px);
+    height: 300px;
+  }
+  body.show-nav {
+    /*width of nav*/
+    transform: translateX(120px);
+  }
+  .switch{
+    width: 30px;
+    height: 16px;
+  }
+  .flicker {
+    width: 12px;
+    height: 12px;
+  }
+  .moon {
+    width: 10px;
+    height: 10px;
+    top: 0;
+    left: 15px;
+  }
+  .dark .flicker {
+    transform: translateX(15px);
+  }
+  .toggle{
+    padding: 2px;
+  }
+  .nav-top{
+    padding-left: 40px;
+  }
+  .nav-top ul {
+    display: grid;
+    grid-template-columns: repeat(4, 80px);
+    place-self: left;
+    font-size: 6px;
+  }
+  a{
+    font-size: 14px;
   }
 }
