@@ -1,2 +1,2 @@
-# temlplate
+# template
 my template
