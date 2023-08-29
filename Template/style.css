@@ -150,28 +150,28 @@ a {
 h1 {
   padding: 100px calc(100% / 12) 20px calc(100% / 12);
 }
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 370px) {
   * {
-    font-size: 10px;
+    font-size: 12px;
   }
   .nav-top ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
   }
   .nav-side {
-    width: 80px;
-    transform: translateX(-80px);
+    width: 120px;
+    transform: translateX(-120px);
     height: 500px;
   }
   body.show-nav {
     /*width of nav*/
-    transform: translateX(80px);
+    transform: translateX(120px);
   }
   body.show-nav .switch {
-    transform: translateX(-50px);
+    transform: translateX(-120px);
   }
   .switch {
     width: 20px;
@@ -182,8 +182,8 @@ h1 {
     height: 8px;
   }
   .moon {
-    width: 8px;
-    height: 8px;
+    width: 6px;
+    height: 6px;
     top: 0;
     left: 10px;
   }
@@ -195,7 +195,7 @@ h1 {
   }
 
   a {
-    font-size: 10px;
+    font-size: 14px;
   }
   .container {
     padding: 20px calc(100% / 12) 10px calc(100% / 12);
